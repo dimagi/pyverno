@@ -28,16 +28,16 @@ pyverno update PY_FILE
 
 `pyverno` is not opinionated about version number formats. The only restriction
 is that a version number may not contain quote characters of the same style used
-to delimit the version string. Exmaples of valid version numbers: `1.0.0`,
+to delimit the version string. Examples of valid version numbers: `1.0.0`,
 `2025-05-22`, `20250522`
 
 ## Purpose
 
 `pyverno` was developed to automate a version check or update during
 [trusted publishing to PyPI](https://docs.pypi.org/trusted-publishers/using-a-publisher/).
-The `check` command is useful when publishing a new final release, and the
-`update` command is useful to create a reasonably unique version number when
-publishing to https://test.pypi.org.
+The `update` command is useful to create a reasonably unique version number when
+publishing to https://test.pypi.org, and the `check` command is useful when
+publishing a new final release.
 
 ## Publishing new versions to PyPI
 
