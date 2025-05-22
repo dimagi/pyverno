@@ -19,7 +19,7 @@ jobs:
           version: '>=0.7'
       - name: Add untagged version suffix
         if: ${{ ! startsWith(github.ref, 'refs/tags/v') }}
-        run: uv run --frozen pyverno update pyverno.py
+        run: uv run --no-dev --frozen pyverno update pyverno.py
       - name: Build a binary wheel and a source tarball
         run: uv build
       - name: Store the distribution packages
@@ -37,7 +37,7 @@ jobs:
         with:
           version: '>=0.7'
       - name: Check version
-        run: uv run --frozen pyverno check pyverno.py "${{ github.ref }}"
+        run: uv run --no-dev --frozen pyverno check pyverno.py "${{ github.ref }}"
   pypi-publish:
     name: Upload release to PyPI
     needs: [build, version-check]

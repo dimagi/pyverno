@@ -22,6 +22,11 @@ classifiers = [
     'Topic :: Software Development :: Libraries :: Python Modules',
 ]
 
+[dependency-groups]
+dev = [
+    'pytest',
+]
+
 [project.urls]
 Home = "https://github.com/dimagi/pyverno"
 
@@ -35,3 +40,12 @@ build-backend = "hatchling.build"
 [tool.hatch.version]
 path = "pyverno.py"
 
+[tool.pytest.ini_options]
+minversion = '8.1'
+addopts = ['--strict-markers']
+empty_parameter_set_mark = 'fail_at_collect'
+xfail_strict = true
+python_files = [
+    'tests.py',
+    '*/tests/*.py',
+]

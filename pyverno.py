@@ -15,7 +15,7 @@ V_EXPR = re.compile(r"""(^__version__\s*=\s*)(['"])(.+?)\2""", flags=re.M)
 def main(argv=sys.argv):
     if len(argv) < 3:
         sys.exit(__doc__)
-    cmd, *args = sys.argv[1:]
+    cmd, *args = argv[1:]
     if cmd in COMMANDS:
         COMMANDS[cmd](*args)
     else:
