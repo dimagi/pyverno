@@ -3,19 +3,19 @@
 Check or update the version number defined in a Python source file such as
 `__init__.py`
 
-## Sub-commands
-
-- `check` - Verify that the `__version__` in `PY_FILE` matches the one embedded
-  in `GIT_TAG_REF`.
-- `update` - Append a timestamped dev version component formatted as
-  `.devYYYYmmddHHMMSS` to the `__version__` string in `PY_FILE`.
-
 Usage:
 ```sh
 pyverno check PY_FILE GIT_TAG_REF
 
 pyverno update PY_FILE
 ```
+
+## Sub-commands
+
+- `check` - Verify that the `__version__` in `PY_FILE` matches the one embedded
+  in `GIT_TAG_REF`.
+- `update` - Append a timestamped dev version component formatted as
+  `.devYYYYmmddHHMMSS` to the `__version__` string in `PY_FILE`.
 
 ## Conventions
 
